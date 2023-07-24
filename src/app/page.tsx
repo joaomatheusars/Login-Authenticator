@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div className='flex'>
       <div className='container mx-auto'>
-        <div className="flex flex-col justify-center items-center  bg-center bg-no-repeat bg-contain h-screen" style={{backgroundImage: `url('/bg.png')`,}}>
-          <div className='flex flex-col  h-11' >
+        <div className="flex flex-col p-16  items-center  bg-center bg-no-repeat bg-contain h-screen" style={{backgroundImage: `url('/bg.png')`,}}>
+          <div className='flex flex-col h-11 w-full' >
             <h3 className='text-purpleH3 text-4xl font-medium'>Sistema de</h3>
-            <h1 className='text-purpleH1 text-6xl font-extrabold'>Autenticação</h1>
+            <h1 className='text-purpleH1 text-6xl font-extrabold pl-20'>Autenticação</h1>
           </div>        
         </div>
       </div>
