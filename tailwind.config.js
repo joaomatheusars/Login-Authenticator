@@ -21,6 +21,7 @@ module.exports = {
         purpleBG: "#5B2B8F",
         greenButton: "#2C825B",
         greenButtonBorder: "#66AB8C",
+        greenHouverButton: '#39d353',
       },
       textColor: {
         textGray: "#907070",
