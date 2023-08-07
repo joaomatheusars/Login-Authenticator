@@ -4,9 +4,9 @@ import CreateAccount from "./components/createAccount";
 
 export default function Home() {
   return (
-    <div className='flex'>
+    <div className='lg:flex justify-center items-center'>
 
-      <div className='container mx-auto'>
+      <div className='container mx-auto '>
         <div className="flex flex-col p-16  items-center  bg-center bg-no-repeat bg-contain h-screen" style={{backgroundImage: `url('/bg.png')`,}}>
           <div className='flex flex-col h-11 w-full' >
             <h3 className='text-purpleH3 text-4xl font-medium'>System</h3>
@@ -16,9 +16,9 @@ export default function Home() {
       </div>
       
       
-      <div className='bg-purpleBG w-2/5 h-screen flex justify-center items-center text-white'>
-        <div className='container px-20 gap-4 flex flex-col items-center'>
-          <div className='flex flex-col gap-4 items-center'>
+      <div className='bg-purpleBG w-full h-screen flex justify-center items-center text-white'>
+        <div className='container px-20 gap-4 flex flex-col items-center justify-center'>
+          <div className='flex flex-col gap-4 items-center justify-center'>
               <Login/>
           </div>
         </div>
