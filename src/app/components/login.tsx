@@ -10,7 +10,6 @@ import { useRouter } from 'next/navigation'
 
 const Login = () => {
   const {data:session} = useSession()
-  console.log('Client Session', session)
   const {status, data} = useSession();
   const handlerLoginClick = () => signIn('google');
   const handleLogoutClick = () => {signOut({redirect: false})};
@@ -19,12 +18,11 @@ const Login = () => {
   const router = useRouter();
 
     return (
-      <div>
+      <div className='container mx-auto'>
         {!toggle &&(
           <div>
             {status === 'unauthenticated' &&(
               <div className='flex flex-col gap-4 items-center'>
-                <pre>{JSON.stringify(session)}</pre>
                 <button className='flex text-textGray p-4 items-center gap-4 bg-white border rounded w-96 h-16 font-medium justify-center' onClick={handlerLoginClick}> 
                   <Image width={32} height={32} src='/googleIcon.png' alt='Group' />
                   <p>Sign In with Google</p>
