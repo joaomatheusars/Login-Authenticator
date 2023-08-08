@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className='lg:flex justify-center items-center'>
 
-      <div className='container mx-auto hidden md:flex'>
+      <div className='container mx-auto hidden md:block'>
         <div className="flex flex-col p-16  items-center  bg-center bg-no-repeat bg-contain h-screen" style={{backgroundImage: `url('/bg.png')`,}}>
           <div className='flex flex-col h-11 w-full' >
             <h3 className='text-purpleH3 text-4xl font-medium'>System</h3>
