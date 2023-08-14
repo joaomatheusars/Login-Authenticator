@@ -1,8 +1,25 @@
-import { authOptions } from "@/app/lib/authCustom";
 import NextAuth, {AuthOptions} from "next-auth";
-//import { use } from "react";
+import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter} from "@auth/prisma-adapter";
+import { Adapter } from "next-auth/adapters";
+//import CredentialsProvider from "next-auth/providers/credentials";
+import { prisma } from "@/lib/prisma";
 
 
+export const authOptions: AuthOptions = {
+    adapter: PrismaAdapter(prisma) as Adapter,
+    providers:[
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID!,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+            authorization: {
+                params: {
+                  prompt: "consent",
+                }
+            },
+        }),    
+    ],
+};
         /*
         CredentialsProvider({
             name: "Sign In",
