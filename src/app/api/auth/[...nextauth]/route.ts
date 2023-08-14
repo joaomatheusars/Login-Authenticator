@@ -17,6 +17,7 @@ const authOptions: AuthOptions = {
             },*/
         }),    
     ],
+    secret: process.env.JWT_SECRET
 };
 
 const handler = NextAuth(authOptions);
