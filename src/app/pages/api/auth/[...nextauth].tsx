@@ -19,9 +19,8 @@ export const authOptions:NextAuthOptions = {
             },
         }),    
     ],
-    debug: true,
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || 'asdsad',
 };
 
-//const handler = NextAuth(authOptions);
-//export {handler as GET, handler as POST};
+const handler = NextAuth(authOptions);
+export {handler as GET, handler as POST};
