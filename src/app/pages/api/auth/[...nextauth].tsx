@@ -19,11 +19,7 @@ export const authOptions:NextAuthOptions = {
             },
         }),    
     ],
-    callbacks: {
-        async signIn({ account, profile }) {
-          return true // Do different verification for other providers that don't have `email_verified`
-        },
-    },
+    debug: true,
     secret: process.env.SECRET,
 };
 
