@@ -17,6 +17,7 @@ const authOptions:NextAuthOptions = {
             },
         }),    
     ],
+    secret: process.env.SECRET,
 };
 // T
 const handler = NextAuth(authOptions);
