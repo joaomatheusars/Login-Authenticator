@@ -4,7 +4,7 @@ import { PrismaAdapter} from "@auth/prisma-adapter";
 import { Adapter } from "next-auth/adapters";
 import { prisma } from "@/lib/prisma";
 
-const authOptions:NextAuthOptions = {
+ export const authOptions:NextAuthOptions = {
     adapter: PrismaAdapter(prisma) as Adapter,
     providers:[
         GoogleProvider({
@@ -19,5 +19,5 @@ const authOptions:NextAuthOptions = {
     ],
 };
 // T
-//const handler = NextAuth(authOptions);
-//export {handler as GET, handler as POST};
+const handler = NextAuth(authOptions);
+export {handler as GET, handler as POST};
